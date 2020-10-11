@@ -31,6 +31,7 @@ Step to Run the Application.
       py manage.py migrate
 7. In CMD
       py manage.py runserver
+8. Also Update the Email host in settings.base.py file and Password for using Email.
 
 
 **There the two setting files are present, if need to switch the "set DJANGO_SETTINGS_MODULE=Multi_DB_Router.settings.local"**
