@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table style="width:30%">
+    <tr>
+        <th>Database Name</th>
+        <th>Product Name</th>
+    </tr>
+    {% for i in qs1 %}
+        <tr>
+            <td>
+                {{i.database_name}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            </td>
+        </tr>       
+    {% endfor %}
+
+    {% for i in qs2 %}
+        <tr>
+            <td>
+                {{i.database_name}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            </td>
+        </tr>       
+    {% endfor %}
+
+    {% for i in qs3 %}
+    <tr>
+        <td>
+            {{i.database_name}}
+        </td>
+        <td>
+            {{i.name}}
+        </td>
+        </td>
+    </tr>       
+{% endfor %}
+
+{% for i in qs4 %}
+<tr>
+    <td>
+        {{i.database_name}}
+    </td>
+    <td>
+        {{i.name}}
+    </td>
+    </td>
+</tr>       
+{% endfor %}
+
+{% for i in qs5 %}
+<tr>
+    <td>
+        {{i.database_name}}
+    </td>
+    <td>
+        {{i.name}}
+    </td>
+    </td>
+</tr>       
+{% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Database 1</h3>
+{% if product1.count != 0 %}
+<table style="width:30%">
+    <tr>
+        <th>User Name</th>
+        <th>Product Name</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+    {% for i in product1 %}
+        <tr>
+            <td>
+                {{i.username}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            <td>
+                <a href="{% url 'edit-product' pk=i.id db=i.database_name name=i.name %}"> Edit</a>
+            </td>
+            <td>
+                <a href="{%url 'delete-product' pk=i.id db=i.database_name %}"> Delete</a>
+            </td>
+        </tr>       
+    {% endfor %}
+</table>
+{% else %}
+    <h4>Nothing to Display</h4>
+{% endif %}
+
+<h3>Database 2</h3>
+{% if product2.count != 0 %}
+<table style="width:30%">
+    <tr>
+        <th>User Name</th>
+        
+        <th>Product Name</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+
+    {% for i in product2 %}
+        <tr>
+            <td>
+                {{i.username}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            <td>
+                <a href="{% url 'edit-product' pk=i.id db=i.database_name name=i.name %}"> Edit</a>
+            </td>
+            <td>
+                <a href="{%url 'delete-product' pk=i.id db=i.database_name %}"> Delete</a>
+            </td>
+        </tr>       
+    {% endfor %}
+</table>
+{% else %}
+    <h4>Nothing to Display</h4>
+{% endif %}
+
+<h3>Database 3</h3>
+{% if product3.count != 0 %}
+<table style="width:30%">
+    <tr>
+        <th>User Name</th>
+        
+        <th>Product Name</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+
+    {% for i in product3 %}
+        <tr>
+            <td>
+                {{i.username}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            <td>
+                <a href="{% url 'edit-product' pk=i.id db=i.database_name name=i.name %}"> Edit</a>
+            </td>
+            <td>
+                <a href="{%url 'delete-product' pk=i.id db=i.database_name %}"> Delete</a>
+            </td>
+        </tr>       
+    {% endfor %}
+</table>
+{% else %}
+    <h5>Nothing to Display</h5>
+{% endif %}
+
+
+<h3>Database 4</h3>
+{% if product4.count != 0 %}
+<table style="width:30%">
+    <tr>
+        <th>User Name</th>
+        
+        <th>Product Name</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+
+    {% for i in product4 %}
+        <tr>
+            <td>
+                {{i.username}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            <td>
+                <a href="{% url 'edit-product' pk=i.id db=i.database_name name=i.name %}"> Edit</a>
+            </td>
+            <td>
+                <a href="{%url 'delete-product' pk=i.id db=i.database_name %}"> Delete</a>
+            </td>
+        </tr>       
+    {% endfor %}
+</table>
+{% else %}
+    <h5>Nothing to Display</h5>
+{% endif %}
+
+
+<h3>Database 5</h3>
+{% if product4.count != 0 %}
+<table style="width:30%">
+    <tr>
+        <th>User Name</th>
+        
+        <th>Product Name</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+
+    {% for i in product5 %}
+        <tr>
+            <td>
+                {{i.username}}
+            </td>
+            <td>
+                {{i.name}}
+            </td>
+            <td>
+                <a href="{% url 'edit-product' pk=i.id db=i.database_name name=i.name %}"> Edit</a>
+            </td>
+            <td>
+                <a href="{%url 'delete-product' pk=i.id db=i.database_name %}"> Delete</a>
+            </td>
+        </tr>       
+    {% endfor %}
+</table>
+{% else %}
+    <h5>Nothing to Display</h5>
+{% endif %}
+
+{% endblock %}

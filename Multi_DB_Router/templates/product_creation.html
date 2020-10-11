@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{message}}
+<form method="POST">
+    {% csrf_token %}
+    <label for="">
+        Select the database  
+    </label>
+    <select name="database" id="cars">
+        {% for i in data %}
+        {% if i.database1 %}
+        <option value="database1">database1</option>
+        {% endif %}
+
+        {% if i.database2 %}
+        <option value="database2">database2</option>
+        {% endif %}
+
+        {% if i.database3 %}
+        <option value="database3">database3</option>
+        {% endif %}
+
+        {% if i.database4 %}
+        <option value="database4">database4</option>
+        {% endif %}
+
+        {% if i.database5 %}
+        <option value="database5">database5</option>
+        {% endif %}
+
+    {% endfor %}
+      </select>
+      <br>
+      <br>
+      <label for="productName">
+        Enter Product name 
+      </label>
+      <input type="text" name="productName" id="productName">
+      <br>
+      <br>
+    <button type="submit">Create</button>
+</form>
+{% endblock %}

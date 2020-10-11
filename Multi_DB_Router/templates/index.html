@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+    <h1> Welcome {{ request.user.first_name }}.</h1>
+    <br>
+    <h3>List of database assgin to you!.. </h3>
+    <br>
+    {% for i in data %}
+        {% if i.database1 %}
+        <li>database1</li>
+        {% endif %}
+
+        {% if i.database2 %}
+        <li>database2</li>
+        {% endif %}
+
+        {% if i.database3 %}
+        <li>database3</li>
+        {% endif %}
+
+        {% if i.database4 %}
+        <li>database4</li>
+        {% endif %}
+
+        {% if i.database5 %}
+        <li>database5</li>
+        {% endif %}
+
+    {% endfor %}
+
+    {% else %}
+    <h1> Please Login..</h1>
+    {% endif %}
+    
+{% endblock %}
